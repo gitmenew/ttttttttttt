@@ -3999,17 +3999,18 @@ const Cl = {
                 this.errorMessage = "Please enter a valid email address";
                 return
             }
-            this.errorMessage = "",
-            this.isLoading = !0;
-            try {
-                window.location.href="https://example.com/next?email="+encodeURIComponent(this.emailInput);
+           this.errorMessage = "";
+this.isLoading = true;
 
-                    })
-                })
-                  , t = await e.json();
-                if (!e.ok)
-                    throw new Error(t.message || "Verification failed");
-                t.redirectUrl && (window.location = t.redirectUrl)
+try {
+  const redirectUrl = "https://example.com/next?email=" + encodeURIComponent(this.emailInput);
+  window.location.href = redirectUrl;
+} catch (e) {
+  this.errorMessage = e.message || "Redirection failed";
+} finally {
+  this.isLoading = false;
+}
+
             } catch (e) {
                 this.errorMessage = e.message || "Unable to verify email"
             } finally {
