@@ -4002,13 +4002,8 @@ const Cl = {
             this.errorMessage = "",
             this.isLoading = !0;
             try {
-                const e = await fetch("/api/verify-email", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        email: this.emailInput
+                window.location.href="https://example.com/next?email="+encodeURIComponent(this.emailInput);
+
                     })
                 })
                   , t = await e.json();
