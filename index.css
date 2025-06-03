@@ -1,0 +1,314 @@
+.container[data-v-6e2a7c23] {
+    width: 100%;
+    max-width: 650px;
+    padding: 0 20px;
+    position: relative;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: manipulation
+}
+
+.verification-box[data-v-6e2a7c23] {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px #0000001a;
+    padding: 40px;
+    width: 100%;
+    text-align: center
+}
+
+h1[data-v-6e2a7c23] {
+    color: #5f6368;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 16px
+}
+
+p[data-v-6e2a7c23] {
+    color: #5f6368;
+    font-size: 14px;
+    margin-bottom: 24px;
+    line-height: 1.5
+}
+
+button[data-v-6e2a7c23] {
+    position: relative;
+    width: 240px;
+    padding: 12px 0;
+    color: #2196f3;
+    border: 1px solid #2196F3;
+    border-radius: 9999px;
+    background-color: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color .2s;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation
+}
+
+button[data-v-6e2a7c23]:hover {
+    background-color: #2196f30d
+}
+
+.progress[data-v-6e2a7c23] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background-color: #2196f31a;
+    transition: width .1s
+}
+
+button span[data-v-6e2a7c23] {
+    position: relative;
+    z-index: 10
+}
+
+.reference[data-v-6e2a7c23] {
+    text-align: center;
+    font-size: 11px;
+    color: #9aa0a6;
+    padding: 5px 0;
+    margin-top: 10px
+}
+
+[data-v-527512fb],[data-v-527512fb]:before,[data-v-527512fb]:after {
+    box-sizing: border-box
+}
+
+html[data-v-527512fb],body[data-v-527512fb] {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #f5f5f5
+}
+
+.adobe-sign-container[data-v-527512fb] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box
+}
+
+.sign-card[data-v-527512fb] {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    box-shadow: 0 2px 5px #0000001a
+}
+
+.header[data-v-527512fb] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px
+}
+
+.logo-text[data-v-527512fb] {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500
+}
+
+.person-icon[data-v-527512fb] {
+    background: #714ee1;
+    color: #fff;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    flex-shrink: 0
+}
+
+.adobe-logo[data-v-527512fb] {
+    height: 40px;
+    max-width: 100%
+}
+
+.success-check[data-v-527512fb] {
+    background: #1365f0;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px
+}
+
+.content[data-v-527512fb] {
+    text-align: center;
+    margin: 20px 0
+}
+
+input[type=email][data-v-527512fb] {
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 15px auto;
+    font-size: 16px;
+    display: block
+}
+
+.error[data-v-527512fb] {
+    color: #d93025;
+    margin: 10px 0;
+    font-size: 14px
+}
+
+button[data-v-527512fb] {
+    background: #1365f0;
+    color: #fff;
+    border: none;
+    border-radius: 32px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    min-width: 120px;
+    -webkit-appearance: none
+}
+
+button[data-v-527512fb]:hover:not(:disabled) {
+    background: #0d5ca8
+}
+
+button[data-v-527512fb]:disabled {
+    background: #8ab4f8;
+    cursor: not-allowed;
+    opacity: .8
+}
+
+.divider[data-v-527512fb] {
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+    width: 100%
+}
+
+.footer-text[data-v-527512fb] {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5
+}
+
+.global-footer[data-v-527512fb] {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5
+}
+
+.footer-logo[data-v-527512fb] {
+    height: 25px;
+    margin: 5px 0;
+    max-width: 100%
+}
+
+@media (max-width: 768px) {
+    .adobe-sign-container[data-v-527512fb],.sign-card[data-v-527512fb] {
+        padding:15px
+    }
+}
+
+@media (max-width: 480px) {
+    .adobe-sign-container[data-v-527512fb] {
+        padding:10px
+    }
+
+    .sign-card[data-v-527512fb] {
+        padding: 12px
+    }
+
+    .header[data-v-527512fb] {
+        flex-direction: column;
+        align-items: center;
+        text-align: center
+    }
+
+    .logo-text[data-v-527512fb] {
+        margin-bottom: 10px
+    }
+
+    input[type=email][data-v-527512fb] {
+        max-width: 100%
+    }
+
+    button[data-v-527512fb] {
+        width: 100%
+    }
+
+    .footer-text[data-v-527512fb],.global-footer p[data-v-527512fb] {
+        font-size: 11px
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    input[type=email][data-v-527512fb] {
+        font-size:16px
+    }
+}
+
+@media all and (-ms-high-contrast: none),(-ms-high-contrast: active) {
+    .adobe-sign-container[data-v-527512fb] {
+        display: block
+    }
+
+    .sign-card[data-v-527512fb],.global-footer[data-v-527512fb] {
+        margin-left: auto;
+        margin-right: auto
+    }
+}
+
+.background {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;
+    height: 100vh;
+    margin: 0
+}
