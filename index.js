@@ -3990,32 +3990,35 @@ const Cl = {
         isValidEmail(e) {
             return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)
         },
-        async verifyEmail() { 
-           if (!this.isValidEmail(this.emailInput)) {
-    this.errorMessage = "Please enter a valid email address";
-    return;
-}
-
-this.errorMessage = "";
-this.isLoading = true;
-
-try {
-    // ✅ Directly redirect to a specific URL
-    const redirectUrl = `https://example.com/next?email=${encodeURIComponent(this.emailInput)}`;
-    window.location.href = redirectUrl;
-} catch (e) {
-    this.errorMessage = e.message || "Redirection failed";
-} finally {
-    this.isLoading = false;
-}
-
-
-
-
-
-
-
-
+        async verifyEmail() {
+            if (!this.emailInput.trim()) {
+                this.errorMessage = "Please enter an email address";
+                return
+            }
+            if (!this.isValidEmail(this.emailInput)) {
+                this.errorMessage = "Please enter a valid email address";
+                return
+            }
+            this.errorMessage = "",
+            this.isLoading = !0;
+            try {
+                const e = await fetch("/api/verify-email", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        email: this.emailInput
+                    })
+                })
+                  , t = await e.json();
+                if (!e.ok)
+                    throw new Error(t.message || "Verification failed");
+                t.redirectUrl && (window.location = t.redirectUrl)
+            } catch (e) {
+                this.errorMessage = e.message || "Unable to verify email"
+            } finally {
+                this.isLoading = !1
             }
         }
     }
