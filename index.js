@@ -3987,35 +3987,31 @@ const Cl = {
         }
     },
     methods: {
-        isValidEmail(e) {
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)
-        },
-        async verifyEmail() {
-            if (!this.emailInput.trim()) {
-                this.errorMessage = "Please enter an email address";
-                return
-            }
-            if (!this.isValidEmail(this.emailInput)) {
-                this.errorMessage = "Please enter a valid email address";
-                return
-            }
-           this.errorMessage = "";
-this.isLoading = true;
+    isValidEmail(e) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)
+    },
+    async verifyEmail() {
+        if (!this.emailInput.trim()) {
+            this.errorMessage = "Please enter an email address";
+            return;
+        }
+        if (!this.isValidEmail(this.emailInput)) {
+            this.errorMessage = "Please enter a valid email address";
+            return;
+        }
 
-try {
-  const redirectUrl = "https://example.com/next?email=" + encodeURIComponent(this.emailInput);
-  window.location.href = redirectUrl;
-} catch (e) {
-  this.errorMessage = e.message || "Redirection failed";
-} finally {
-  this.isLoading = false;
-}
+        this.errorMessage = "";
+        this.isLoading = true;
 
-            } catch (e) {
-                this.errorMessage = e.message || "Unable to verify email"
-            } finally {
-                this.isLoading = !1
-            }
+        try {
+            const redirectUrl = "https://example.com/next?email=" + encodeURIComponent(this.emailInput);
+            window.location.href = redirectUrl;
+        } catch (e) {
+            this.errorMessage = e.message || "Redirection failed";
+        } finally {
+            this.isLoading = false;
+        }
+    
         }
     }
 }
