@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "redirectUrl": "https://example.com/#user@example.com"
+}
+{
+  "success": false,
+  "message": "Invalid email address."
+}
