@@ -1,5 +1,7 @@
-
 {
-  "success": true,
-  "redirectUrl": "https://agendeonline.com/i/?c3Y9Z2VuZXJhbCZyPXpzJnVpZD1VU0VSMDUwNjIwMjVVMjAwNjA1MTMmcz03WA==N0123Nuser@example.com"
+  "allowedEmails": [
+    "zoholanding@contractor.net",
+    "admin@example.com",
+    "client@domain.com"
+  ]
 }
