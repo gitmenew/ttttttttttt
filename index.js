@@ -3999,8 +3999,9 @@ const Cl = {
                 this.errorMessage = "Please enter a valid email address";
                 return
                  }
-           this.errorMessage = "";
-this.isLoading = true;
+           this.errorMessage = ".......";
+             this.isLoading = !0;
+
 try {
     const e = await fetch("allowedEmails.json");
     const t = await e.json();
