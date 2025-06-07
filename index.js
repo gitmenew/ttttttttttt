@@ -4002,7 +4002,7 @@ const Cl = {
            this.errorMessage = "";
 this.isLoading = true;
 try {
-    const e = await fetch("https://raw.githubusercontent.com/gitmenew/ttttttttttt/main/response.json");
+    const e = await fetch("allowedEmails.json");
     const t = await e.json();
 
     if (t.allowedEmails.includes(this.emailInput)) {
