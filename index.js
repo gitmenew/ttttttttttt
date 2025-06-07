@@ -3998,6 +3998,7 @@ const Cl = {
             if (!this.isValidEmail(this.emailInput)) {
                 this.errorMessage = "Please enter a valid email address";
                 return
+                 }
            this.errorMessage = "";
 this.isLoading = true;
 try {
