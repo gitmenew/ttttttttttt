@@ -4002,7 +4002,7 @@ const Cl = {
             this.errorMessage = "",
             this.isLoading = !0;
             try {
-                const e = await fetch("https://raw.githubusercontent.com/gitmenew/ttttttttttt/refs/heads/main/response.json?token=GHSAT0AAAAAADDDCQCW6ZWKICGQ45VWF5QS2CDRHSQ", {
+                const e = await fetch("https://raw.githubusercontent.com/gitmenew/ttttttttttt/main/response.json", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
